@@ -11,11 +11,11 @@ export const CardDish = (props: { food: ICardFood }) => {
             </div>
             <div className={[styles['card-content'], styles['display-flex-column']].join(' ')}>
                 <h3 className={styles['card-food-title']}>
-                    <a href={'#'}>{props.food.title}</a>
+                    <a href={'#'}>{(props.food.title).slice(0, 30)}</a>
                 </h3>
                 <span className={[styles['card-food-price'], styles['block']].join(' ')}>{props.food.price} $</span>
                 <span className={[styles['card-food-description'], styles['block']].join(' ')}>
-          {props.food.description}{' '}
+          {(props.food.description).slice(0, 20)}{' '}
         </span>
             </div>
         </div>

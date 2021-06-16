@@ -1,23 +1,28 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {CardDish} from '../../../../components/CardDishes/CardCatalog';
-import {ICardFood} from '../../../../models/shop';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {CategoriesDishes} from './Сategories';
 import {SelectDishes} from './SelectDishes';
-import {CatalogFoods} from '../../../../fake-data/fake-data';
-
 import styles from './styles.module.scss';
 import {MobileCategoriesDishes} from './Сategories/MobileCategories';
+import {dataCatalogDishes} from '../../../../fake-data/catalog';
 
 export const Catalog = () => {
+
+    const getDataToCategory = (idCategory: number) => {
+        return dataCatalogDishes.filter((dish: any) => dish.parentCategory === idCategory);
+    }
+
+    const [category, setCategory] = useState({category: 0, dataCategory: getDataToCategory(0)});
     const [listDishes, setList] = useState({
-        items: CatalogFoods.slice(0, 10),
-        numberProduct: 10,
+        items: category.dataCategory.slice(0, 10),
+        numberProduct: 10
     })
-    const [category, setCategory] = useState(0)
 
     const chooseCategory = (cat: number) => {
-        setCategory(cat)
+        setCategory({dataCategory: getDataToCategory(cat), category: cat});
+        console.log(category);
+        setList({numberProduct: 10, items: getDataToCategory(cat).slice(0, 10)})
     }
 
     const backToTop = () => {
@@ -27,12 +32,16 @@ export const Catalog = () => {
         }
     }
 
+    useEffect(() => {
+        //getAllData
+    }, [])
+
     const fetchMoreData = () => {
         const numProduct = listDishes.numberProduct
         setTimeout(() => {
             setList({
                 items: listDishes.items.concat(
-                    CatalogFoods.slice(numProduct, numProduct + 10)
+                    category.dataCategory.slice(numProduct, numProduct + 10)
                 ),
                 numberProduct: numProduct + 10,
             })
@@ -41,7 +50,7 @@ export const Catalog = () => {
     return (
         <div className={styles['catalog-shop']}>
             <div className={styles['display-categories']}>
-                <CategoriesDishes active={category} chooseCategory={chooseCategory}/>
+                <CategoriesDishes active={category.category} chooseCategory={chooseCategory}/>
             </div>
             <div className={styles['header-catalog-nav']}>
                 <div>
@@ -55,9 +64,9 @@ export const Catalog = () => {
                 </div>
             </div>
             <InfiniteScroll
-                dataLength={CatalogFoods.length}
+                dataLength={category.dataCategory.length}
                 next={fetchMoreData}
-                hasMore={listDishes.items.length !== CatalogFoods.length}
+                hasMore={listDishes.items.length !== category.dataCategory.length}
                 endMessage={
                     <button
                         onClick={backToTop}
@@ -73,7 +82,7 @@ export const Catalog = () => {
                 loader={<h4>Loading...</h4>}
             >
                 <div className={styles['catalog']}>
-                    {listDishes.items.map((food: ICardFood, index) => (
+                    {listDishes.items.map((food: any, index: any) => (
                         <CardDish food={food} key={`card-dish${index}`}/>
                     ))}
                 </div>
