@@ -140,18 +140,7 @@ export const Payment = () => {
                             </div>
                             <div className={styles['padding-in']}>
                                 <PaymentForm/>
-                                <div className={styles['bottom-block-order']}>
-                                    <ColorfulButtonBig
-                                        content={'Cancel'}
-                                        action={closeModal}
-                                        active={false}
-                                    />
-                                    <ColorfulButtonBig
-                                        content={'Confirm'}
-                                        action={closeModal}
-                                        active={true}
-                                    />
-                                </div>
+
                             </div>
                         </div>
                     </div>

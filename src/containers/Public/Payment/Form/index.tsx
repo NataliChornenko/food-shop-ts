@@ -3,6 +3,7 @@ import {useState} from 'react';
 import styles from '../styles.module.scss';
 import {SelectDishes} from '../../Catalog/FoodCatalog/SelectDishes';
 import {typePaymentData} from '../../../../fake-data/fake-data';
+import {ColorfulButtonBig} from '../../../../components/Buttons/ColorfuButton/Big';
 
 export const PaymentForm = () => {
     const [payment, setPayment] = useState('credit')
@@ -25,7 +26,7 @@ export const PaymentForm = () => {
                             onClick={() => checkTypePayment(type.type)}
                         >
                             <div>
-                                <img src={type.icon}/>
+                                <img src={type.icon} alt={'icon'}/>
                             </div>
                             <span className={styles['block']}> {type.title}</span>
                         </button>
@@ -38,8 +39,31 @@ export const PaymentForm = () => {
 }
 
 const FormPay = () => {
+    const initialFormData = Object.freeze({
+        username: "",
+        card: "",
+        securityCode: "",
+        expirationDate: '',
+        typeDelivery: 0
+
+    });
+
+    const [formData, updateFormData] = React.useState(initialFormData);
+
+    const handleChange = (e: any) => {
+        updateFormData({
+            ...formData,
+            [e.target.name]: e.target.value.trim()
+        });
+    };
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault()
+        console.log(formData);
+    };
+
     return (
-        <div
+        <form
             className={[styles['form-container'], styles['display-flex-column']].join(
                 ' '
             )}
@@ -54,8 +78,10 @@ const FormPay = () => {
                 <input
                     placeholder={'Levi Ackerman'}
                     id="name"
+                    name="username"
                     className={styles['input-dark-border']}
                     type="text"
+                    onChange={handleChange}
                 />
             </div>
             <div
@@ -70,8 +96,11 @@ const FormPay = () => {
                     id="cardnumber"
                     className={styles['input-dark-border']}
                     type="text"
+                    name="card"
                     pattern="[0-9]*"
                     inputMode="numeric"
+                    maxLength={16}
+                    onChange={handleChange}
                 />
             </div>
             <div
@@ -94,6 +123,9 @@ const FormPay = () => {
                         type="text"
                         pattern="[0-9]*"
                         inputMode="numeric"
+                        name={'expirationDate'}
+                        maxLength={6}
+                        onChange={handleChange}
                     />
                 </div>
                 <div
@@ -105,10 +137,12 @@ const FormPay = () => {
                     <label htmlFor="securitycode">Security Code</label>
                     <input
                         id="securitycode"
-                        type="text"
+                        type="password"
                         className={styles['input-dark-border']}
                         pattern="[0-9]*"
                         inputMode="numeric"
+                        name={'securityCode'}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
@@ -132,14 +166,32 @@ const FormPay = () => {
                     <label htmlFor="securitycode">Table no.</label>
                     <input
                         placeholder={'140'}
-                        id="securitycode"
+                        id="security"
                         type="text"
                         className={[styles['input-dark-border'], styles['button-table-no']].join(' ')}
                         pattern="[0-9]*"
                         inputMode="numeric"
                     />
                 </div>
+                {/*<div className={styles["exp-wrapper"]}>*/}
+                {/*    <input autoComplete="off" className="exp" id="month" maxLength={2} pattern="[0-9]*"*/}
+                {/*            placeholder="MM" type="text" />*/}
+                {/*    <input autoComplete="off" className="exp" id="year" maxLength={2} pattern="[0-9]*"*/}
+                {/*           placeholder="YY" type="text"/>*/}
+                {/*</div>*/}
             </div>
-        </div>
+            <div className={styles['bottom-block-order']}>
+                <ColorfulButtonBig
+                    content={'Cancel'}
+                    action={''}
+                    active={false}
+                />
+                <ColorfulButtonBig
+                    content={'Confirm'}
+                    action={handleSubmit}
+                    active={true}
+                />
+            </div>
+        </form>
     )
 }

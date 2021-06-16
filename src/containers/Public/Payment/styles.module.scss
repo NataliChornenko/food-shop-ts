@@ -253,6 +253,35 @@
   max-width: 45px !important;
 }
 
+.exp-wrapper {
+  position: relative;
+  border: 1px solid #aaa;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  height: 36px;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+.exp-wrapper:after {
+  content: '/';
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  color: #aaa;
+}
+
+input.exp {
+  float: left;
+  font-family: monospace;
+  border: 0;
+  width: 18px;
+  outline: none;
+  appearance: none;
+  font-size: 14px;
+}
+
 @media all and (max-width: 750px) {
   .modal-order {
     width: 100%;

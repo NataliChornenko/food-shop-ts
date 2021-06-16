@@ -3,7 +3,7 @@ import {IOrder} from '../../../models/shop';
 import styles from './styles.module.scss';
 import iconTrash from '../../../sources/images/VectorTrash.svg';
 
-export const CardOrder = (props: { order: IOrder }) => {
+export const CardOrder = (props: { order: IOrder , handleChange: any, key: any}) => {
     return (
         <div className={styles['card-dishes-order']}>
             <div
@@ -35,6 +35,8 @@ export const CardOrder = (props: { order: IOrder }) => {
                     </div>
                     <input
                         placeholder={'2'}
+                        name={'number-dishes'}
+                        onChange={props.handleChange}
                         className={[
                             styles['button-dark'],
                             styles['button-dark-small'],
@@ -56,7 +58,9 @@ export const CardOrder = (props: { order: IOrder }) => {
                 <div className={styles['card-order']}>
                     <input
                         placeholder={'Order Note...'}
+                        name={props.key}
                         className={styles['button-dark']}
+                        onChange={props.handleChange}
                     />
                 </div>
                 <div className={styles['order-card-action']}>

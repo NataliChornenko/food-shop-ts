@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {CardOrder} from '../CardDishes/CardOrder';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import styles from './styles.module.scss';
@@ -9,6 +9,17 @@ export const OrderList = () => {
         items: orderData.slice(0, 5),
         numberProduct: 5,
     })
+    const commentsOrder: any = Object.freeze({})
+    const [comments, setComments] = React.useState(commentsOrder);
+    // useEffect(() => {
+    //     orderData.map((order, index) => (commentsOrder[`order-${index}`]) = '')
+    // })
+    const handleChange = (e: any) => {
+        setComments({
+            ...comments,
+            [e.target.name]: e.target.value.trim()
+        });
+    };
     const fetchMoreData = () => {
         const numProduct = listOrder.numberProduct
         setTimeout(() => {
@@ -19,6 +30,9 @@ export const OrderList = () => {
                 numberProduct: numProduct + 5,
             })
         }, 1500)
+    }
+    const handleSubmit = () => {
+        console.log(commentsOrder);
     }
     return (
         <div
@@ -34,8 +48,7 @@ export const OrderList = () => {
                 >
                     <div>
                         {listOrder.items.map((order: any, index) => (
-                            <CardOrder order={order} key={`order-${index}`}/>
-                        ))}
+                            <CardOrder order={order} handleChange={handleChange} key={`order-${index}`}/>))}
                     </div>
                 </InfiniteScroll>
             </div>
