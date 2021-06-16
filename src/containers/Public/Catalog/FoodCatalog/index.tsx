@@ -8,7 +8,6 @@ import {MobileCategoriesDishes} from './Сategories/MobileCategories';
 import {dataCatalogDishes} from '../../../../fake-data/catalog';
 
 export const Catalog = () => {
-
     const getDataToCategory = (idCategory: number) => {
         return dataCatalogDishes.filter((dish: any) => dish.parentCategory === idCategory);
     }
@@ -20,9 +19,9 @@ export const Catalog = () => {
     })
 
     const chooseCategory = (cat: number) => {
-        setCategory({dataCategory: getDataToCategory(cat), category: cat});
-        console.log(category);
-        setList({numberProduct: 10, items: getDataToCategory(cat).slice(0, 10)})
+        setCategory(() => ({category: cat, dataCategory: getDataToCategory(cat)}));
+        setList(() => ({numberProduct: 10, items: getDataToCategory(cat).slice(0, 10)}))
+        console.log(listDishes);
     }
 
     const backToTop = () => {
@@ -36,6 +35,7 @@ export const Catalog = () => {
         //getAllData
     }, [])
 
+    //infinite scroll
     const fetchMoreData = () => {
         const numProduct = listDishes.numberProduct
         setTimeout(() => {
@@ -60,7 +60,7 @@ export const Catalog = () => {
                     <SelectDishes/>
                 </div>
                 <div className={styles['mobile-categories']}>
-                    <MobileCategoriesDishes/>
+                    <MobileCategoriesDishes active={category.category} chooseCategory={chooseCategory}/>
                 </div>
             </div>
             <InfiniteScroll
@@ -68,16 +68,7 @@ export const Catalog = () => {
                 next={fetchMoreData}
                 hasMore={listDishes.items.length !== category.dataCategory.length}
                 endMessage={
-                    <button
-                        onClick={backToTop}
-                        className={
-                            styles[
-                                'fa fa-arrow-up cart-button input-add-search search-button'
-                                ]
-                        }
-                    >
-                        Up
-                    </button>
+                    <p>All dishes</p>
                 }
                 loader={<h4>Loading...</h4>}
             >

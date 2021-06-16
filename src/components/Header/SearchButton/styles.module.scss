@@ -1,0 +1,11 @@
+.block-result-search-field{
+  max-width: 400px;
+  max-height: 40vh;
+  height: 100%;
+  position: fixed;
+  top: 100px;
+  right: 300px;
+  background-color: #cccccc;
+  z-index: 9999999;
+  overflow: scroll;
+}
