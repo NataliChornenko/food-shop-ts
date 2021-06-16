@@ -1,0 +1,252 @@
+@import 'src/sources/styles/styles.scss';
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  background-color: #1f1d2b !important;
+}
+
+//modal
+
+.modal-order {
+  right: 0;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  max-width: 1000px;
+  width: 100%;
+  color: $color-text-main;
+  padding: 24px;
+}
+.modal-order .order-rows {
+  width: 98%;
+}
+
+
+.header-block.header-block-order {
+  background-color: #1f1d2b;
+  margin-left: 24px;
+
+  h2 {
+    color: $color-text-main;
+  }
+}
+.modal-order button.btn.btn--colorful-big.colorful-active-big{
+  max-width: 40px;
+}
+.button-icon-arrow {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+
+  i {
+    width: 40px;
+    height: 40px;
+  }
+}
+.button-table-no{
+  margin-left: 8px;
+}
+.modal-order {
+  background-color: #1f1d2b;
+  right: 0;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  color: #ffffff;
+  padding: 24px;
+
+  .header-block {
+    width: 88%;
+  }
+}
+
+.border-right {
+  border-right: 1px solid silver;
+}
+
+
+
+.header-block button.btn.btn--colorful-big.colorful-active-big {
+  width: 40px;
+  padding: 0;
+}
+
+.modal-order .header-block {
+  padding: 0;
+}
+
+//wrapper
+.aside-block-order .wrapper {
+  overflow-y: scroll;
+  max-height: 80vh;
+  height: 100%;
+}
+
+.modal-order .wrapper {
+  overflow-y: scroll;
+  max-height: 80vh;
+  height: 100%;
+}
+
+.catalog {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transition: right 0.3s;
+}
+
+.modal-order .wrapper.display-flex-column {
+  max-height: 60vh;
+}
+
+//payment form
+.set-type-payment button {
+  background-color: $backgr-color-dark;
+}
+
+.bottom-border-payment {
+  border-bottom: 1px solid #393c49;
+}
+
+.payment-title {
+  width: 100%;
+  text-align: center;
+}
+
+.button-type-pay {
+  background: #2d303e;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-width: 112px;
+  width: 100%;
+  max-height: 64px;
+  height: 100%;
+  padding: 14px;
+}
+
+.input-dark-border {
+  background: #2d303e;
+  border: 1px solid #393c49;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input-small {
+  margin-right: 2%;
+}
+
+.active-payment-type {
+  border: 1px solid #ea7c69;
+}
+
+.set-type-payment {
+  list-style: none;
+
+  li {
+    padding: 4px;
+    width: 100%;
+    background: #1f1d2b;
+  }
+
+  li:hover {
+    opacity: 0.5;
+  }
+}
+
+.vl {
+  border-left: 1px solid #393c49;
+  height: 100vh;
+  max-width: 1px;
+}
+
+.order-info {
+  right: 33%;
+}
+
+.result-price {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    justify-content: space-between;
+  }
+}
+
+.bottom-block-order {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+
+  button {
+    margin: 4px;
+  }
+
+  div {
+    justify-content: space-between;
+  }
+}
+
+.block-payment-border {
+  border-top: 2px solid #393c49;
+  border-bottom: 2px solid #393c49;
+}
+.header-modal-order {
+  width: 96%;
+}
+.set-bottom-button {
+  position: fixed;
+  max-width: 37%;
+  bottom: 0;
+  right: 0;
+}
+.padding-button-pay {
+  margin: 4px;
+  width: 100%;
+}
+.set-products-cart {
+  max-height: 700px;
+}
+
+.modal-order .result-price {
+  border-top: 1px solid #393c49;
+}
+
+.modal-order .display-flex-row.order-card-description.border-bottom {
+  display: none;
+}
+
+.padding-in {
+  padding-left: 24px;
+}
+
+.modal-order .wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.display-fixed {
+  position: fixed;
+}
+
+.header-catalog-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-catalog-nav {
+  h2 {
+    color: $color-text-main;
+  }
+}
+.pink-button {
+  max-width: 45px !important;
+}
+
+@media all and (max-width: 750px) {
+  .modal-order {
+    width: 100%;
+  }
+}

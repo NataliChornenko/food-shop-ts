@@ -1,0 +1,59 @@
+@import 'src/sources/styles/styles.scss';
+
+section.ant-layout.styles_layout__3hRP8 {
+  background-color: #252836 !important;
+}
+
+.layout {
+  min-height: 100% !important;
+  background-color: #252836;
+
+  .content {
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+    background-color: #252836;
+    padding: 50px 50px 24px 75px;
+  }
+}
+
+@media all and (min-width: 640px) {
+  .display-none-web {
+    display: none;
+  }
+  .display-web {
+    display: flex;
+  }
+  .catalog-content {
+    width: 65%;
+
+  }
+}
+
+@media all and (max-width: 640px) {
+  .display-none-web {
+    display: flex;
+  }
+
+  .display-web {
+    display: none;
+  }
+  .layout .content {
+    margin: 0;
+    padding: 0;
+  }
+
+  .catalog-content {
+    width: 100% !important;
+  }
+
+  .content {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .layout .content {
+    padding-left: 0;
+  }
+}

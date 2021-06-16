@@ -1,0 +1,25 @@
+.complex-button-search input,
+button {
+  background: #2d303e;
+  border: 1px solid #393c49;
+  box-sizing: border-box;
+  border-radius: 8px;
+  max-height: 40px;
+  height: 100%;
+}
+
+.input-search {
+  border-left: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  padding: 14.5px;
+  max-height: 40px;
+  height: 100%;
+}
+
+.btn--search {
+  border-right: none !important;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: #ffffff;
+}

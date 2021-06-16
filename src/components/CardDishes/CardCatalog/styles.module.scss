@@ -1,0 +1,51 @@
+@import 'src/sources/styles/styles.scss';
+
+.card-food:hover {
+  transform: scale(1.01);
+  transition: 1ms;
+}
+
+.card-food img {
+  max-width: 175px;
+  max-height: 175px;
+  border-radius: 50%;
+  transform: translateY(-52px);
+}
+
+.card-food {
+  max-width: 202px;
+  width: 100%;
+  background-color: $backgr-color-dark;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #dcdcdc;
+  padding: 24px;
+  margin: 48px 14px 58px 14px;
+  max-height: 230px;
+}
+
+.card-food img {
+  max-width: 175px;
+  max-height: 175px;
+  border-radius: 50%;
+  transform: translateY(-40px);
+}
+
+.card-content {
+  transform: translateY(-30px);
+  max-width: 150px;
+  text-align: center;
+  padding-bottom: -50px;
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.card-food-description {
+  opacity: 0.5;
+}

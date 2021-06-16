@@ -1,0 +1,73 @@
+@import 'src/sources/styles/styles.scss';
+.catalog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 100vh;
+  height: 100%;
+  padding-top: 34px;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+}
+
+.catalog-shop {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog::-webkit-scrollbar {
+  width: 0;
+}
+
+.header-catalog-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-catalog-nav {
+  h2 {
+    color: $color-text-main;
+  }
+}
+
+@media all and (min-width: 640px) {
+  .display-none-web {
+    display: none;
+  }
+  .display-web {
+    display: flex;
+  }
+  .catalog-content {
+    width: 65%;
+  }
+}
+button.fa.fa-arrow-up {
+  transform: translateX(30px);
+}
+
+@media all and (min-width: 750px) {
+  .mobile-categories {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 750px) {
+  .display-none-web {
+    display: flex;
+  }
+
+  .display-categories {
+    display: none;
+  }
+}
+@media screen and (min-width: 100px) and (max-width: 640px) {
+  .catalog-content {
+    width: 100% !important;
+  }
+
+  .header-catalog-nav {
+    justify-content: space-around;
+    margin-top: 14px;
+  }
+}

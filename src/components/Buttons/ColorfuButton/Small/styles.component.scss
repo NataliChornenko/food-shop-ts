@@ -1,0 +1,20 @@
+@import 'src/sources/styles/styles.scss';
+
+.btn--colorful-small {
+  background: #ea7c69;
+  border-radius: 8px;
+  width: 100%;
+  padding: 7px;
+  max-height: 48px;
+}
+
+.colorful-active-small {
+  background: #ea7c69;
+  color: $color-text-main;
+}
+
+.colorful-none-active-small {
+  background: #1f1d2b;
+  border: 1px solid #393c49;
+  color: $brandColor;
+}

@@ -1,0 +1,45 @@
+@import 'src/sources/styles/styles.scss';
+
+.catalog-content {
+  width: 65%;
+  background-color: #252836;
+}
+
+section.ant-layout.styles_layout__3hRP8 {
+  background-color: #252836 !important;
+}
+
+@media all and (min-width: 640px) {
+  .display-none-web {
+    display: none;
+  }
+  .display-web {
+    display: flex;
+  }
+  .catalog-content {
+    width: 65%;
+  }
+  .display-order-block {
+    display: none;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .display-none-web {
+    display: flex;
+  }
+
+  .display-order-block {
+    display: none;
+  }
+
+  .catalog-content {
+    width: 100% !important;
+  }
+}
+
+.display-cart-mobile {
+  display: block;
+
+}
+
