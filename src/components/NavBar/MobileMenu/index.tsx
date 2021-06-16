@@ -7,12 +7,12 @@ export const MobileMenu = () => {
         <div className={'hamburger-menu'}>
             <input id='menu__toggle' type='checkbox'/>
             <label className={'menu__btn btn btn-dark'} htmlFor='menu__toggle'>
-                <span></span>
+                <span/>
             </label>
 
             <ul className={'menu__box'}>
-                {listMenu.map((menu: any) => (
-                    <li>
+                {listMenu.map((menu: any, index) => (
+                    <li key={`mobile-item-menu-${index}`}>
                         <Link className={'menu__item'} to={`/${menu.title}`}>
                             <img className={'icon-menu-color'} src={menu.icon} alt={'mobile-menu'}/>
                         </Link>

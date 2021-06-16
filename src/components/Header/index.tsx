@@ -52,7 +52,7 @@ export const Header = () => {
                         isOpen={state}
                         onRequestClose={closeModal}
                         style={customStyles}
-                        contentLabel="Example Modal"
+                        contentLabel='Example Modal'
                     >
                         <div>
                             <Order/>

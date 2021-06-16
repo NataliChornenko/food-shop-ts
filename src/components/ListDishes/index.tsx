@@ -33,8 +33,8 @@ export const OrderList = () => {
                     loader={<h4>Loading...</h4>}
                 >
                     <div>
-                        {listOrder.items.map((order: any) => (
-                            <CardOrder order={order}/>
+                        {listOrder.items.map((order: any, index) => (
+                            <CardOrder order={order} key={`order-${index}`}/>
                         ))}
                     </div>
                 </InfiniteScroll>

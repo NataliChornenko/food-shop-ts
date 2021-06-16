@@ -20,6 +20,7 @@ export const Menu = () => {
                             active={page}
                             index={index}
                             choosePage={choosePage}
+                            key={`menu-item-${index}`}
                         />
                     ))}
                 </ul>

@@ -43,7 +43,7 @@ export const Payment = () => {
                 isOpen={state}
                 onRequestClose={closeModal}
                 style={customStyles}
-                contentLabel="Example Modal"
+                contentLabel='Example Modal'
             >
                 <div className={styles['display-flex-column']}>
                     <div
@@ -66,7 +66,7 @@ export const Payment = () => {
                                         className={styles['button-icon-arrow']}
                                         onClick={closeModal}
                                     >
-                                        <i className="fa fa-long-arrow-left" aria-hidden="true"/>
+                                        <i className='fa fa-long-arrow-left' aria-hidden='true'/>
                                         <img src={iconBackArrow} alt={'arrow-back'}/>
                                     </button>
                                     <div
@@ -118,7 +118,7 @@ export const Payment = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles['vl']}></div>
+                        <div className={styles['vl']}/>
                         <div className={styles['order-rows']}>
                             <div
                                 className={[
@@ -132,7 +132,7 @@ export const Payment = () => {
                                         className={styles['button-icon-arrow']}
                                         onClick={closeModal}
                                     >
-                                        <i className="fa fa-long-arrow-left" aria-hidden="true"/>
+                                        <i className='fa fa-long-arrow-left' aria-hidden='true'/>
                                     </button>
                                     <h2 className={styles['header-title']}>Payment</h2>
                                     <p>3 payment method available</p>

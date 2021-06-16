@@ -1,5 +1,4 @@
 import React from 'react';
-
 import tasty from '../../../sources/images/tasty.jpg';
 import styles from './styles.module.scss';
 import {ICardFood} from '../../../models/shop';

@@ -1,14 +1,8 @@
 import React from 'react'
-import {useState} from 'react'
 import {categoryProducts} from '../../../../../fake-data/fake-data'
 import styles from './styles.module.scss'
 
-export const CategoriesDishes = () => {
-    const [category, setCategory] = useState(0)
-
-    const chooseCategory = (cat: number) => {
-        setCategory(cat)
-    }
+export const CategoriesDishes = (props: {active: number, chooseCategory: any }) => {
     return (
         <ul
             className={[
@@ -19,28 +13,17 @@ export const CategoriesDishes = () => {
         >
             {categoryProducts.map((cat, index) => (
                 <li
-
                     className={
-                        category === index
+                        props.active === index
                             ? styles['category-active']
                             : styles['none-active']
                     }
+                    key={`web-cat${index}`}
                 >
-                    <a onClick={() => chooseCategory(index)}>{cat}</a>
+                    <a onClick={() => props.chooseCategory(index)}>{cat}</a>
                 </li>
             ))}
         </ul>
     )
 }
 
-export const MobileCategoriesDishes = () => {
-    return (
-        <div>
-            <select className={styles['catalog-select']}>
-                {categoryProducts.map(cat => (
-                    <option>{cat}</option>
-                ))}
-            </select>
-        </div>
-    )
-}

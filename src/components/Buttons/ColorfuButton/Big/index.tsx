@@ -1,6 +1,7 @@
-import React from 'react'
-import './styles.component.scss'
-import { IButton } from '../../../../models/shop'
+import React from 'react';
+import './styles.component.scss';
+import { IButton } from '../../../../models/shop';
+import iconPlus from '../../../../sources/images/Plus.svg'
 
 export const ColorfulButtonBig = (props: IButton) => {
   return (
@@ -10,7 +11,7 @@ export const ColorfulButtonBig = (props: IButton) => {
       }`}
       onClick={props.action}
     >
-      {props.content}
+        {props.content==='+'?(<img src={iconPlus} alt={'icon-add'}/>):props.content}
     </button>
   )
 }

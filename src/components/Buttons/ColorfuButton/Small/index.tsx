@@ -7,7 +7,7 @@ export const ColorfulButtonSmall = (props: IButton) => {
       className={`btn btn--colorful-small ${
         props.active ? 'colorful-active-small' : 'colorful-none-active-small'
       }`}
-      onClick={props.action}
+      onClick={()=>props.action()}
     >
       {props.content}
     </button>

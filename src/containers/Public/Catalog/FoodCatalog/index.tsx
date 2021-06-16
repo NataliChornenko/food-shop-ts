@@ -2,17 +2,23 @@ import React, {useState} from 'react';
 import {CardDish} from '../../../../components/CardDishes/CardCatalog';
 import {ICardFood} from '../../../../models/shop';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import {CategoriesDishes, MobileCategoriesDishes} from './Сategories';
+import {CategoriesDishes} from './Сategories';
 import {SelectDishes} from './SelectDishes';
 import {CatalogFoods} from '../../../../fake-data/fake-data';
 
 import styles from './styles.module.scss';
+import {MobileCategoriesDishes} from './Сategories/MobileCategories';
 
 export const Catalog = () => {
     const [listDishes, setList] = useState({
         items: CatalogFoods.slice(0, 10),
         numberProduct: 10,
     })
+    const [category, setCategory] = useState(0)
+
+    const chooseCategory = (cat: number) => {
+        setCategory(cat)
+    }
 
     const backToTop = () => {
         if (window.pageYOffset > 0) {
@@ -35,9 +41,8 @@ export const Catalog = () => {
     return (
         <div className={styles['catalog-shop']}>
             <div className={styles['display-categories']}>
-                <CategoriesDishes/>
+                <CategoriesDishes active={category} chooseCategory={chooseCategory}/>
             </div>
-
             <div className={styles['header-catalog-nav']}>
                 <div>
                     <h2>Choose dishes</h2>
@@ -68,8 +73,8 @@ export const Catalog = () => {
                 loader={<h4>Loading...</h4>}
             >
                 <div className={styles['catalog']}>
-                    {listDishes.items.map((food: ICardFood) => (
-                        <CardDish food={food}/>
+                    {listDishes.items.map((food: ICardFood, index) => (
+                        <CardDish food={food} key={`card-dish${index}`}/>
                     ))}
                 </div>
             </InfiniteScroll>

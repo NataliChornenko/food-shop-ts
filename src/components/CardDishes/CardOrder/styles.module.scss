@@ -7,6 +7,7 @@
   padding: 8px;
   cursor: pointer;
 }
+
 .button-trash:hover {
   opacity: 0.5;
 }
@@ -37,6 +38,7 @@
     justify-content: space-between;
   }
 }
+
 .display-flex-row.order-card-description.border-bottom {
   color: white;
   justify-content: space-around;
@@ -44,6 +46,7 @@
   margin: 14px;
   border-bottom: 1px solid #393c49;
 }
+
 .result-price {
   border-top: 1px solid #393c49;
 }
@@ -65,9 +68,11 @@
   max-width: 33%;
   color: #ffffff;
 }
+
 ul.set-button-order {
   margin-bottom: 24px;
 }
+
 .justify-content-beetw {
   justify-content: space-between;
 }
@@ -80,6 +85,7 @@ ul.set-button-order {
   display: flex;
   flex-direction: row;
   list-style: none;
+
   li {
     margin: 4px;
   }
@@ -114,13 +120,17 @@ ul.set-button-order {
 }
 
 .order-card-action {
-  padding: 0 10px;
+  padding-left: 10px;
   max-width: 40px;
 }
 
 .card-dishes-order {
   width: 100%;
   margin-bottom: 27px;
+}
+
+.price p {
+  margin: 8px 0 0 2px;
 }
 
 .card-order {
@@ -131,13 +141,15 @@ ul.set-button-order {
     color: #ffffff;
   }
 }
-.order-card-action.price {
-  max-width: 50px;
+
+.order-card-description {
+  margin-bottom: 14px;
 }
 
 .display-flex-row.order-card-description.border-bottom {
   padding-bottom: 24px;
 }
+
 .card-order img {
   width: 45px;
   height: 40px;
