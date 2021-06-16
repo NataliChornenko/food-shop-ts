@@ -1,9 +1,8 @@
-import React from 'react'
-import {CardOrder} from '../CardDishes/CardOrder'
-import InfiniteScroll from 'react-infinite-scroll-component'
-import {useState} from 'react'
-import styles from './styles.module.scss'
-import {orderData} from '../../fake-data/fake-data'
+import React, {useState} from 'react';
+import {CardOrder} from '../CardDishes/CardOrder';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import styles from './styles.module.scss';
+import {orderData} from '../../fake-data/fake-data';
 
 export const OrderList = () => {
     const [listOrder, setList] = useState({

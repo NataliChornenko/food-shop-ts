@@ -196,11 +196,12 @@ ul.set-button-order {
 .order-card-action .price {
   max-width: 50px;
 }
+
 @media screen and (max-width: 1900px) and (min-width: 640px) {
-  .aside-block-order{
+  .aside-block-order {
     max-width: 33%;
   }
-  .set-func-payment{
+  .set-func-payment {
     max-width: 33%;
   }
 }
@@ -209,20 +210,11 @@ ul.set-button-order {
   aside .aside-block-order {
     display: none;
   }
-  .aside-block-order{
+  .aside-block-order {
     max-width: 80%;
   }
 
-  .set-func-payment{
+  .set-func-payment {
     max-width: 80%;
   }
 }
-//
-//@media screen and (max-width: 1900px) and (min-width: 640px) {
-//  .aside-block-order{
-//    max-width: 33%;
-//  }
-//  .set-func-payment{
-//    max-width: 33%;
-//  }
-//}

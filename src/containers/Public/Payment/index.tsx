@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import Modal from 'react-modal'
-import {PaymentForm} from './Form'
-import iconBackArrow from '../../../sources/images/BackArrow.svg'
-import {ColorfulButtonBig} from '../../../components/Buttons/ColorfuButton/Big'
-import {OrderList} from '../../../components/ListDishes'
-import styles from './styles.module.scss'
+import React, {useState} from 'react';
+import Modal from 'react-modal';
+import {PaymentForm} from './Form';
+import iconBackArrow from '../../../sources/images/BackArrow.svg';
+import {ColorfulButtonBig} from '../../../components/Buttons/ColorfuButton/Big';
+import {OrderList} from '../../../components/ListDishes';
+import styles from './styles.module.scss';
 
 const customStyles = {
     content: {
@@ -67,7 +67,7 @@ export const Payment = () => {
                                         onClick={closeModal}
                                     >
                                         <i className="fa fa-long-arrow-left" aria-hidden="true"/>
-                                        <img src={iconBackArrow}/>
+                                        <img src={iconBackArrow} alt={'arrow-back'}/>
                                     </button>
                                     <div
                                         className={[

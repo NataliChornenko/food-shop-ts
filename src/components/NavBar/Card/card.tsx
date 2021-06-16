@@ -1,6 +1,6 @@
-import {IMenuCardProps} from '../../../models/shop'
-import {Link} from 'react-router-dom'
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {IMenuCardProps} from '../../../models/shop';
 
 export const MenuCard = (props: IMenuCardProps) => {
     return (
@@ -14,7 +14,7 @@ export const MenuCard = (props: IMenuCardProps) => {
         >
             <Link to={`/${props.card.title}`}>
                 <div className={'pink-square'}>
-                    <img className={'icon-menu-color'} src={props.card.icon}/>
+                    <img className={'icon-menu-color'} src={props.card.icon} alt={'menu-item'}/>
                 </div>
             </Link>
         </li>

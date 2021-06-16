@@ -15,9 +15,9 @@ export default function Public(): React.ReactElement {
             <Layout.Content className={styles.content}>
                 <Header/>
                 <Switch>
-                    <Route path="/catalog" component={CatalogPage}/>
-                    <Route path="/pay" component={Payment}/>
-                    <Route path="/" component={CatalogPage}/>
+                    <Route path='/catalog' component={CatalogPage}/>
+                    <Route path='/pay' component={Payment}/>
+                    <Route path='/' component={CatalogPage}/>
                 </Switch>
             </Layout.Content>
         </Layout>

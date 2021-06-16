@@ -1,10 +1,6 @@
 @import 'src/sources/styles/styles.scss';
 
-.ReactModal__Content.ReactModal__Content--after-open {
-  background-color: #1f1d2b !important;
-}
-
-//modal
+//modal-order
 
 .modal-order {
   right: 0;
@@ -16,10 +12,14 @@
   color: $color-text-main;
   padding: 24px;
 }
+
 .modal-order .order-rows {
   width: 98%;
 }
 
+.ReactModal__Content.ReactModal__Content--after-open {
+  background-color: #1f1d2b !important;
+}
 
 .header-block.header-block-order {
   background-color: #1f1d2b;
@@ -29,9 +29,11 @@
     color: $color-text-main;
   }
 }
-.modal-order button.btn.btn--colorful-big.colorful-active-big{
+
+.modal-order button.btn.btn--colorful-big.colorful-active-big {
   max-width: 40px;
 }
+
 .button-icon-arrow {
   background-color: transparent;
   border: none;
@@ -42,9 +44,11 @@
     height: 40px;
   }
 }
-.button-table-no{
+
+.button-table-no {
   margin-left: 8px;
 }
+
 .modal-order {
   background-color: #1f1d2b;
   right: 0;
@@ -62,7 +66,6 @@
 .border-right {
   border-right: 1px solid silver;
 }
-
 
 
 .header-block button.btn.btn--colorful-big.colorful-active-big {
@@ -193,19 +196,23 @@
   border-top: 2px solid #393c49;
   border-bottom: 2px solid #393c49;
 }
+
 .header-modal-order {
   width: 96%;
 }
+
 .set-bottom-button {
   position: fixed;
   max-width: 37%;
   bottom: 0;
   right: 0;
 }
+
 .padding-button-pay {
   margin: 4px;
   width: 100%;
 }
+
 .set-products-cart {
   max-height: 700px;
 }
@@ -241,6 +248,7 @@
     color: $color-text-main;
   }
 }
+
 .pink-button {
   max-width: 45px !important;
 }

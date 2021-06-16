@@ -1,7 +1,7 @@
-import React from 'react'
-import {Catalog} from './FoodCatalog'
-import {Order} from '../Order'
-import styles from './styles.module.scss'
+import React from 'react';
+import {Catalog} from './FoodCatalog';
+import {Order} from '../Order';
+import styles from './styles.module.scss';
 
 export const CatalogPage = () => {
     return (

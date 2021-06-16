@@ -1,9 +1,9 @@
-import React from 'react'
-import {ICardMenu} from '../../models/shop'
-import './styles.modules.scss'
-import {useState} from 'react'
-import {listMenu} from '../../fake-data/fake-data'
-import {MenuCard} from './Card/card'
+import React from 'react';
+import {useState} from 'react';
+import {ICardMenu} from '../../models/shop';
+import './styles.modules.scss';
+import {listMenu} from '../../fake-data/fake-data';
+import {MenuCard} from './Card/card';
 
 export const Menu = () => {
     const [page, setPage] = useState(0)

@@ -1,4 +1,5 @@
 @import 'src/sources/styles/styles.scss';
+
 .catalog {
   display: flex;
   flex-direction: row;
@@ -42,6 +43,7 @@
     width: 65%;
   }
 }
+
 button.fa.fa-arrow-up {
   transform: translateX(30px);
 }
@@ -61,6 +63,7 @@ button.fa.fa-arrow-up {
     display: none;
   }
 }
+
 @media screen and (min-width: 100px) and (max-width: 640px) {
   .catalog-content {
     width: 100% !important;

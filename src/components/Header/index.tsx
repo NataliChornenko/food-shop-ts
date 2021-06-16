@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import './styles.module.scss'
-import {days, months} from '../../fake-data/fake-data'
-import {SearchButton} from './SearchButton'
-import {MobileMenu} from '../NavBar/MobileMenu'
-import {Order} from '../../containers/Public/Order'
-import Modal from 'react-modal'
-import iconCart from '../../sources/images/CardCredit.svg'
-import styles from './styles.module.scss'
+import React, {useState} from 'react';
+import Modal from 'react-modal';
+
+import {days, months} from '../../fake-data/fake-data';
+import {SearchButton} from './SearchButton';
+import {MobileMenu} from '../NavBar/MobileMenu';
+import {Order} from '../../containers/Public/Order';
+import iconCart from '../../sources/images/CardCredit.svg';
+import styles from './styles.module.scss';
 
 const customStyles = {
     content: {
@@ -46,7 +46,7 @@ export const Header = () => {
                 >
                     <MobileMenu/>
                     <button className={styles['btn-icon']} onClick={openModal}>
-                        <img src={iconCart}/>
+                        <img src={iconCart} alt={'icon-cart'}/>
                     </button>
                     <Modal
                         isOpen={state}

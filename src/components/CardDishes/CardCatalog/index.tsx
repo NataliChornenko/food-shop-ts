@@ -1,7 +1,8 @@
-import React from 'react'
-import tasty from '../../../sources/images/tasty.jpg'
-import {ICardFood} from '../../../models/shop'
-import styles from './styles.module.scss'
+import React from 'react';
+
+import tasty from '../../../sources/images/tasty.jpg';
+import styles from './styles.module.scss';
+import {ICardFood} from '../../../models/shop';
 
 export const CardDish = (props: { food: ICardFood }) => {
     return (
